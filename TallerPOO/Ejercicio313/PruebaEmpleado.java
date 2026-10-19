@@ -32,7 +32,7 @@ public class PruebaEmpleado {
     }
 
     // Pide por consola los tres datos y devuelve el Empleado creado.
-    // Se lee todo con nextLine() para evitar problemas con el salto de línea pendiente en el Scanner.
+    // Se Usamos nextLine() para evitar problemas con el salto de linea pendientes en el Scanner
     private static Empleado leerEmpleado(Scanner entrada) {
         System.out.print("Primer nombre: ");
         String primerNombre = entrada.nextLine();
