@@ -71,4 +71,31 @@ public class Perfil_Medico {
     public double obtenerPesoKg() {
         return pesoKg;
     }
+    public int calcularEdad() {
+        LocalDate hoy = LocalDate.now();
+        int edad = hoy.getYear() - anioNacimiento;
+
+        boolean cumpleanosPendiente = hoy.getMonthValue() < mesNacimiento
+                || (hoy.getMonthValue() == mesNacimiento && hoy.getDayOfMonth() < diaNacimiento);
+        if (cumpleanosPendiente) {
+            edad = edad - 1;
+        }
+        return edad;
+    }
+    public int calcularFrecuenciaMaxima() {
+        int valorBase = 220;
+        return valorBase - calcularEdad();
+    }
+    public double calcularFrecuenciaEsperadaMinima() {
+        double porcentajeMinimo = 0.50;
+        return calcularFrecuenciaMaxima() * porcentajeMinimo;
+    }
+    public double calcularFrecuenciaEsperadaMaxima() {
+        double porcentajeMaximo = 0.85;
+        return calcularFrecuenciaMaxima() * porcentajeMaximo;
+    }
+    public double calcularBMI() {
+        double alturaMetros = alturaCm / 100;
+        return pesoKg / (alturaMetros * alturaMetros);
+    }
 }
