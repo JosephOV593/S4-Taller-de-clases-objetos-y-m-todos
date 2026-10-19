@@ -2,14 +2,15 @@ package Ejercicio312;
 
 import javax.swing.JOptionPane;
 
-public class PruebaFactura {
+public class Prueba_Facturas {
+
     public static void main(String[] args) {
         String numeroPieza = JOptionPane.showInputDialog ("Número de Pieza:");
-        String descripcionPieza = JOptionPane.showInputDialog ("Descripción de Pieza:")
+        String descripcionPieza = JOptionPane.showInputDialog ("Descripción de Pieza:");
         int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de artículos:"));
         double precio = Double.parseDouble(JOptionPane.showInputDialog("Precio por artículo (use punto decimal xfa):"));
 
-        Factura factura = new Factura(numeroPieza, descripcionPieza, cantidad, precio);
+        Facturas factura = new Facturas(numeroPieza, descripcionPieza, cantidad, precio);
 
         JOptionPane.showMessageDialog(null,
                 "Número de pieza: " + factura.obtenerNumeroPieza()

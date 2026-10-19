@@ -1,12 +1,14 @@
 package Ejercicio312;
 
-public class Factura {
+public class Facturas {
+
+
     private String numeroPieza;
     private String descripcionPieza;
     private int cantidad;
     private double precioPorArticulo;
 
-    public Factura (String numeroPieza, String descripcionPieza, int cantidad, double precioPorArticulo) {
+    public Facturas (String numeroPieza, String descripcionPieza, int cantidad, double precioPorArticulo) {
         establecerNumeroPieza(numeroPieza);
         establecerDescripcionPieza(descripcionPieza);
         establecerCantidad(cantidad);
@@ -14,7 +16,7 @@ public class Factura {
     }
     public void establecerNumeroPieza (String numeroPieza) {this.numeroPieza = numeroPieza; }
     public String obtenerNumeroPieza () {return numeroPieza;}
-    public void establecerDescripcionPieza (String numeroPieza) {this.descripcionPieza = descripcionPieza}
+    public void establecerDescripcionPieza (String descripcionPieza) {this.descripcionPieza = descripcionPieza;}
     public String obtenerDescripcionPieza() {return descripcionPieza;}
     public void establecerCantidad(int cantidad) {
         if (cantidad > 0) {
